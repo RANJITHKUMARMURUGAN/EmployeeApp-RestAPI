@@ -1,10 +1,9 @@
-package com.bridgelabz
+package com.bridgelabz.epa
 
-import com.epa.EmployeeModel
 import grails.testing.gorm.DomainUnitTest
 import spock.lang.Specification
 
-class EmployeeModelSpec extends Specification implements DomainUnitTest<EmployeeModel> {
+class EmployeeSpec extends Specification implements DomainUnitTest<Employee> {
 
     def setup() {
     }

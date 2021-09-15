@@ -1,6 +1,5 @@
-package com.bridgelabz
+package com.bridgelabz.epa
 
-import com.epa.EmployeeService
 import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
