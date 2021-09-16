@@ -1,6 +1,5 @@
 package com.bridgelabz.epa
 
-import com.epa.epa.EmployeeController
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 

@@ -1,5 +1,7 @@
 package employee.payroll.app
+
 import com.bridgelabz.epa.EmployeeController
+
 class UrlMappings {
 
     static mappings = {

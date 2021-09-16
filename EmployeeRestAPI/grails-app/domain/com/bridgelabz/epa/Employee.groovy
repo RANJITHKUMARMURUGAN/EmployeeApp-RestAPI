@@ -3,12 +3,11 @@ package com.bridgelabz.epa
 import java.time.LocalDate
 
 class Employee {
-
     Integer id
     String name
     String gender
     String profilePic
-    List<String> department = ["HR", "Engineer", "Finance", "Sales", "Others"]
+    List<String> department = ["HR", "Sales", "Finance", "Engineer", "Others"]
     Integer salary
     LocalDate startDate
     String notes

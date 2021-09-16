@@ -4,6 +4,8 @@
   Date: 9/15/2021
   Time: 10:13 AM
 --%>
+
+<!-- Include Main Layout -->
 <meta name="layout" content="main"/>
 
 <div class="main-content">

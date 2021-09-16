@@ -1,10 +1,9 @@
-package com.bridgelabz
+package com.bridgelabz.epa
 
-import com.epa.EmployeeService
 import grails.testing.services.ServiceUnitTest
 import spock.lang.Specification
 
-class EmployeeServiceSpec extends Specification implements ServiceUnitTest<EmployeeService>{
+class AppInitializationServiceSpec extends Specification implements ServiceUnitTest<AppInitializationService>{
 
     def setup() {
     }

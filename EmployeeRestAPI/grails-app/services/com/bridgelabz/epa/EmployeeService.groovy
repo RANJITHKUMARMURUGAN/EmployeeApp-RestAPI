@@ -7,7 +7,6 @@ import grails.web.servlet.mvc.GrailsParameterMap
 class EmployeeService {
 
     def serviceMethod() {
-
     }
 
     def save(GrailsParameterMap params) {
@@ -15,11 +14,27 @@ class EmployeeService {
         def response = AppUtil.saveResponse(false, employee)
         if (employee.validate()) {
             employee.save(flush: true)
-            if (!employee.hasErrors()){
+            if (!employee.hasErrors()) {
                 response.isSuccess = true
             }
         }
         return response
+    }
+
+    def update(Employee employee, GrailsParameterMap params) {
+        employee.properties = params
+        def response = AppUtil.saveResponse(false, employee)
+        if (employee.validate()) {
+            employee.save(flush: true)
+            if (!employee.hasErrors()) {
+                response.isSuccess = true
+            }
+        }
+        return response
+    }
+
+    def getById(Serializable id) {
+        return Employee.get(id)
     }
 
     def list(GrailsParameterMap params) {
@@ -33,6 +48,16 @@ class EmployeeService {
             }
         }
         return [list: listOfEmployees, count: listOfEmployees.totalCount]
+    }
+
+    def delete(Employee employee) {
+        try {
+            employee.delete(flush: true)
+        } catch (Exception e) {
+            println(e.getMessage())
+            return false
+        }
+        return true
     }
 
 }

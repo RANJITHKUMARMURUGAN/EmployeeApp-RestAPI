@@ -9,12 +9,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <asset:stylesheet src="application.css"/>
+    %{--    <asset:javascript src="application.js"/>--}%
 
     <g:layoutHead/>
 </head>
 
 <body>
-
 <header class="header-content header">
     <div class="logo-content">
         <g:img dir="../assets/logo/"
@@ -26,7 +26,10 @@
     </div>
 </header>
 
+
 <g:layoutBody/>
+
+
 
 <asset:javascript src="application.js"/>
 

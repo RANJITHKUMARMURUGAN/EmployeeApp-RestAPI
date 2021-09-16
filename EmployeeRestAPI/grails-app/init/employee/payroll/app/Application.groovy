@@ -1,4 +1,4 @@
-package com.emp
+package employee.payroll.app
 
 import grails.boot.GrailsApp
 import grails.boot.config.GrailsAutoConfiguration

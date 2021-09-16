@@ -1,9 +1,6 @@
 package com.bridgelabz.epa
 
 class UIHelperTagLib {
-   // static defaultEncodeAs = [taglib:'html']
-    //static encodeAsForTags = [tagName: [taglib:'html'], otherTagName: [taglib:'none']]
-
     static namespace = "UIHelper"
 
     def renderErrorMessage = { attrs, body ->
