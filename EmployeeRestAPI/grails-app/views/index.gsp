@@ -1,11 +1,11 @@
 <!doctype html>
 <html>
 <head>
-
+    <meta name="layout" content="main"/>
 
 </head>
 <body>
-<h1 class="text-center">Welcome Ranjith</h1>
-<meta name="layout" content="main"/>
+
+
 </body>
 </html>

@@ -35,7 +35,4 @@ class EmployeeService {
         return [list: listOfEmployees, count: listOfEmployees.totalCount]
     }
 
-    def create(){
-
-    }
 }

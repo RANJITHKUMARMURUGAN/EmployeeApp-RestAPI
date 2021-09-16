@@ -9,17 +9,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico"/>
     <asset:stylesheet src="application.css"/>
-    %{--    <asset:javascript src="application.js"/>--}%
 
     <g:layoutHead/>
 </head>
 
 <body>
 
+<header class="header-content header">
+    <div class="logo-content">
+        <g:img dir="../assets/logo/"
+               file="logo.png" alt="Logo Image" height="50"/>
+        <div class="logo-text-content">
+            <span class="emp-text">EMPLOYEE</span>
+            <span class="emp-text emp-payroll">PAYROLL</span>
+        </div>
+    </div>
+</header>
 
 <g:layoutBody/>
-
-
 
 <asset:javascript src="application.js"/>
 

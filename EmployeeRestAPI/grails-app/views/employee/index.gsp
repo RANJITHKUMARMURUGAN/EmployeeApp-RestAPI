@@ -6,28 +6,15 @@
 --%>
 <meta name="layout" content="main"/>
 
-<header class="header-content header">
-    <div class="logo-content">
-        <g:img dir="../assets/logo/"
-               file="logo.png" alt="Logo Image" height="50"/>
-        %{--        <img src="../assets/logo/logo.png" alt="Logo Image">--}%
-
-        <div class="logo-text-content">
-            <span class="emp-text">EMPLOYEE</span>
-            <span class="emp-text emp-payroll">PAYROLL</span>
-        </div>
-    </div>
-</header>
-
 <div class="main-content">
     <div class="header-content">
         <div class="emp-detail-text">
             Employee Details
-            <div class="emp-count">10</div>
+            <div class="emp-count">${employeeList.size()}</div>
         </div>
         <g:link controller="employee" action="create" class="add-button">
             <g:img dir="../assets/icons/" file="add-24px.svg" alt=""/>
-            <g:message code="Add User"/>
+            <g:message code="add.user"/>
         </g:link>
     </div>
 
@@ -44,26 +31,34 @@
                 <th>Start Date</th>
                 <th>Actions</th>
             </tr>
-            <!-- Employee Details in Table Rows -->
-            <tr>
-                <td>
-                    <g:img class="profile" dir="../assets/profile-images/" file="Ellipse%20-5.png" alt="Profile"/>
-                </td>
-                <td>Ranjith Kumar</td>
-                <td>Male</td>
-                <td><div class="dept-label">Sales</div><div class="dept-label">Finance</div></td>
-                <td>&#8377; 1200000</td>
-                <td>25 May 2020</td>
-                <!--To update and delete an employee from the database-->
-                <td>
-                    <g:img (click)="remove(employee.id)" dir="../assets/icons/"
-                           file="delete-black-18dp.svg" alt="delete" />
-                    <g:img (click)="update(employee)" dir="../assets/icons/"
-                           file="create-black-18dp.svg" alt="edit" />
-                </td>
-            </tr>
-
+        <!-- Employee Details in Table Rows -->
+            <g:each in="${employeeList}" var="info">
+                <tr>
+                    <td><g:img class="profile" uri="${info.profilePic}" alt="Profile"/></td>
+                    <td>${info.name}</td>
+                    <td>${info.gender}</td>
+                    <td>
+                        <g:each in="${info.department}" var="i">
+                            <div class="dept-label">
+                                ${i}
+                            </div>
+                        </g:each>
+                    </td>
+                    <td>&#8377; ${info.salary}</td>
+                    <td>${info.startDate}</td>
+                    <!--To update and delete an employee from the database-->
+                    <td>
+                        <g:link controller="employee" action="delete" id="${info.id}">
+                            <g:img dir="../assets/icons/"
+                                   file="delete-black-18dp.svg" alt="delete" />
+                        </g:link>
+                        <g:link controller="employee" action="edit" id="${info.id}">
+                            <g:img (click)="update(employee)" dir="../assets/icons/"
+                                   file="create-black-18dp.svg" alt="edit" />
+                        </g:link>
+                    </td>
+                </tr>
+            </g:each>
         </table>
     </div>
 </div>
-
